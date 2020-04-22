@@ -48,6 +48,73 @@ table {
     box-sizing: border-box;
 }
 
-body {
-    background-color: green;
+header,
+body > section {
+    border-bottom: 1px solid grey;
+}
+
+.grid-ct >*:not(:last-child) {
+    border-right: 1px solid grey;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 300px repeat(5, 1fr) 200px;
+    height: 200px;
+}
+
+body .main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 800px;
+}
+
+.membership {
+    height: 500px;
+}
+
+.latest-posts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 400px);
+}
+
+.grid-item {
+    border-bottom: 1px solid grey;
+}
+
+.latest-posts .billboard {
+    grid-column: span 2;
+}
+
+.handbook {
+    height: 100vh;
+}
+
+.community-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 300px);
+}
+
+.community-links .person-of-week {
+    grid-column: span 2;
+}
+
+.feature {
+    height: 350px;
+}
+
+.curated-posts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 800px;
+}
+
+.newsletter {
+    height: 900px;
+}
+
+footer {
+    height: 600px;
 }
