@@ -16,7 +16,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -50,15 +50,24 @@ table {
     box-sizing: border-box;
 }
 
+body {
+    background: rgb(116, 116, 116);
+}
+
+body p {
+    font-family: 'Noto Serif', serif;
+}
+
+h1,
+h2 {
+    font-family: 'Varela Round', Arial, Helvetica sans-serif;
+}
+
 header {
     display: grid;
     grid-template-columns: 300px repeat(5, 1fr) 200px;
     height: 200px;
     background: rgb(177, 177, 177);
-}
-
-body {
-    background: rgb(116, 116, 116);
 }
 
 body .main {
@@ -72,20 +81,90 @@ body .main div:nth-child(2) {
     background: rgb(189, 189, 189);
 }
 
+body .main div {
+    position: relative;
+}
+
+body .main h1,
+body .main h2 {
+    position: absolute;
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    word-spacing: 2px;
+}
+
+body .main h1 {
+    top: 50px;
+    width: 70%;
+    left: 50%;
+    margin-left: -35%;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    line-height: 1.5;
+}
+
+body .main h2 {
+    bottom: 300px;
+    width: 70%;
+    left: 50%;
+    margin-left: -35%;
+    line-height: 1.3;
+}
+
 .membership {
     height: 500px;
     background: rgb(146, 146, 146);
+    padding: 70px 400px;
+}
+
+.membership >* {
+    width: 700px;
+    line-height: 2;
+    font-size: 20px;
+}
+
+.membership ul {
+    margin-top: 20px;
+}
+
+.membership li {
+    list-style: square;
+    margin-left: 50px;
 }
 
 .latest-posts {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 500px repeat(2, 700px);
+    grid-gap: 40px;
     background: grey;
+    padding: 70px;
+}
+
+.latest-posts h2 {
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.latest-posts cite {
+    display: inline-block;
+    margin: 30px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.latest-posts cite a {
+    color: #666;
+}
+
+.latest-posts p {
+    line-height: 2;
 }
 
 .latest-posts div:nth-child(4) {
-    background: rgb(158, 158, 158);
+    background: rgb(138, 138, 138);
 }
 
 .latest-posts .billboard {
