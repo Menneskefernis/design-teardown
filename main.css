@@ -42,79 +42,95 @@ table {
 	border-spacing: 0;
 }
 
+/* My code */
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-header,
-body > section {
-    border-bottom: 1px solid grey;
-}
-
-.grid-ct >*:not(:last-child) {
-    border-right: 1px solid grey;
-}
-
 header {
     display: grid;
     grid-template-columns: 300px repeat(5, 1fr) 200px;
     height: 200px;
+    background: rgb(177, 177, 177);
+}
+
+body {
+    background: rgb(116, 116, 116);
 }
 
 body .main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: 800px;
+    background: rgb(158, 158, 158);
+}
+
+body .main div:nth-child(2) {
+    background: rgb(189, 189, 189);
 }
 
 .membership {
     height: 500px;
+    background: rgb(146, 146, 146);
 }
 
 .latest-posts {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 400px);
+    grid-template-rows: 500px repeat(2, 700px);
+    background: grey;
 }
 
-.grid-item {
-    border-bottom: 1px solid grey;
+.latest-posts div:nth-child(4) {
+    background: rgb(158, 158, 158);
 }
 
 .latest-posts .billboard {
     grid-column: span 2;
+    background: rgb(189, 189, 189);
 }
 
 .handbook {
     height: 100vh;
+    margin-top: 150px;
+    background: rgb(189, 189, 189);
 }
 
 .community-links {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 300px);
+    background: grey;
 }
 
 .community-links .person-of-week {
     grid-column: span 2;
+    background: rgb(158, 158, 158);
 }
 
 .feature {
     height: 350px;
+    background: rgb(189, 189, 189);
 }
 
 .curated-posts {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     height: 800px;
+    background: grey;
 }
 
 .newsletter {
     height: 900px;
+    margin-top: 200px;
+    background: rgb(189, 189, 189);
 }
 
 footer {
     height: 600px;
+    margin-top: 200px;
+    background: rgb(189, 189, 189);
 }
